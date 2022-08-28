@@ -1,0 +1,96 @@
+baseURL: ""
+languageCode: en-us
+title: MOBLEL.PK
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: news
+      name: News
+      url: /news
+      weight: 20
+    - identifier: gadgets
+      name: Gadgets
+      url: /gadgets
+      weight: 30
+    - identifier: auto
+      name: Auto
+      url: /auto
+      weight: 40
+    - identifier: about
+      name: About
+      url: /about
+      weight: 50
+    - identifier: contact
+      name: Contact
+      url: /contact
+      weight: 60        
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 70      
+
+
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+  ShowPostNavLinks: true # Adds a Previous / Next post suggestion under a single post
+
+  # for enchanced SEO
+  # env: production
+
+  # Home Page
+  
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+    responsiveImages: false # When you include images in the Page Bundle, multiple sizes of the image will automatically be provided using the HTML5 srcset field. To reduce generation time and size of the site, you can disable this feature
+    linkFullImages: false # To enable hyperlinks to the full image size on post pages
+
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:rizwaaan.pk@gmail.com"
+    - name: "linkedin"
+      url: "#"
+    - name: "youtube"
+      url: "#"
+    - name: "resume"
+      url: "#"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
